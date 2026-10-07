@@ -20,7 +20,7 @@
       'menu.pdf': 'Cardápio completo (PDF)',
       'rec.tag': 'Fita da casa', 'rec.lead': 'O que rola na chapa, no salão e na estrada. Troque de canal.',
       'rec.c1': 'O primeiro smash dry aged do Brasil', 'rec.c2': 'Gorgonzola, cogumelos defumados, alho negro',
-      'rec.c3t': 'Balcão', 'rec.c3': 'Da chapa pra mesa, no centro', 'rec.c4': '3º colocado no mundial', 'rec.c5': 'Uma noite na casa',
+      'rec.c3t': 'Balcão', 'rec.c3': 'Da chapa pra mesa, no centro', 'rec.c4': '3º colocado no mundial', 'rec.c5': 'Uma noite na casa', 'rec.soundOff': 'Ativar som', 'rec.soundOn': 'Som ligado',
       'aw.tag': 'Prateleira', 'aw.title': 'Prêmios', 'aw.s1': 'melhor do mundo', 'aw.s2': 'melhor do Brasil', 'aw.s3': 'anos de centro',
       'aw.1': '', 'aw.2': '', 'aw.3': '', 'aw.4': '', 'aw.5': '', 'aw.6': '', 'aw.7': '', 'aw.8': '', 'aw.9': '', 'aw.10': '', 'aw.11': '',
       'ev.tag': 'Na estrada', 'ev.title': 'Quer a Holy<br>no seu evento?',
@@ -49,7 +49,7 @@
       'menu.pdf': 'Full menu (PDF, Portuguese)',
       'rec.tag': 'House tape', 'rec.lead': 'What goes down on the grill, in the dining room and on the road. Switch channels.',
       'rec.c1': 'Brazil’s first dry aged smash', 'rec.c2': 'Gorgonzola, smoked mushrooms, black garlic',
-      'rec.c3t': 'The pass', 'rec.c3': 'From the grill to the table, downtown', 'rec.c4': '3rd place at the world championship', 'rec.c5': 'A night at the house',
+      'rec.c3t': 'The pass', 'rec.c3': 'From the grill to the table, downtown', 'rec.c4': '3rd place at the world championship', 'rec.c5': 'A night at the house', 'rec.soundOff': 'Turn sound on', 'rec.soundOn': 'Sound on',
       'aw.tag': 'Trophy shelf', 'aw.title': 'Awards', 'aw.s1': 'best in the world', 'aw.s2': 'best in Brazil', 'aw.s3': 'years downtown',
       'aw.1': 'Burger Dudes · 2nd best burger in the world 26/27',
       'aw.2': 'Dubai Burger Championship · 3rd place 2026',
@@ -227,21 +227,24 @@
 
   /* ================= scroll: header, hero parallax, horizontal track ================= */
   const mao = $('.mao'), track = $('.mao-track'), heroV = $('.hero-video');
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  let lastW = innerWidth;
+  const stableH = () => fine ? innerHeight : (document.documentElement.clientHeight || innerHeight);
   function sizeMao() {
     const extra = track.scrollWidth - innerWidth;
-    mao.style.setProperty('--mao-h', (innerHeight + Math.max(extra, 0)) + 'px');
+    mao.style.setProperty('--mao-h', (stableH() + Math.max(extra, 0)) + 'px');
   }
   function onScroll() {
     const y = scrollY;
     hdr.classList.toggle('solid', y > innerHeight * .6);
-    if (!reduce && y < innerHeight) heroV.style.transform = `scale(${1.08 + y / innerHeight * .12}) translateY(${y * .18}px)`;
+    if (!reduce && fine && y < innerHeight) heroV.style.transform = `scale(${1.08 + y / innerHeight * .12}) translateY(${y * .18}px)`;
     const r = mao.getBoundingClientRect();
     const max = mao.offsetHeight - innerHeight;
     const p = Math.min(Math.max(-r.top / max, 0), 1);
     track.style.transform = `translateX(${-p * (track.scrollWidth - innerWidth)}px)`;
   }
   addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', () => { sizeMao(); onScroll(); });
+  addEventListener('resize', () => { if (innerWidth === lastW && !fine) return; lastW = innerWidth; sizeMao(); onScroll(); });
   addEventListener('load', () => { sizeMao(); onScroll(); });
   sizeMao();
 
@@ -289,9 +292,20 @@
     noiseOn = true; stat.classList.add('on'); noise();
     vf.poster = btn.dataset.poster;
     vf.src = btn.dataset.src;
+    vf.muted = !soundOn;
     if (autoplay) vf.play().catch(() => {});
     setTimeout(() => { noiseOn = false; stat.classList.remove('on'); }, reduce ? 0 : 380);
   }
+  const sndBtn = $('.vf-sound'), sndLbl = sndBtn.querySelector('[data-i18n]');
+  let soundOn = false;
+  function setSound(on) {
+    soundOn = on; vf.muted = !on;
+    sndBtn.setAttribute('aria-pressed', on);
+    sndLbl.dataset.i18n = on ? 'rec.soundOn' : 'rec.soundOff';
+    sndLbl.textContent = T[lang][sndLbl.dataset.i18n];
+    if (on) vf.play().catch(() => {});
+  }
+  sndBtn.addEventListener('click', () => setSound(!soundOn));
   let recLive = false;
   $$('.ch').forEach(b => b.addEventListener('click', () => tune(b, true)));
   new IntersectionObserver(es => es.forEach(e => {
