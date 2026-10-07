@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Burger · O Clássico do Centro</title>
+<meta name="description" content="Holy Burger, desde 2013 na Vila Buarque, São Paulo. O Clássico do Centro. 2º melhor hambúrguer do mundo (Burger Dudes 26/27).">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-poster.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+
+<!-- ===== INTRO ===== -->
+<div class="intro" aria-hidden="true">
+  <img src="img/logo.svg" alt="" class="intro-logo">
+  <div class="intro-bar"><span></span></div>
+  <p class="intro-txt">S I N C E &nbsp; 2 0 1 3</p>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="hdr">
+  <a href="#top" class="hdr-logo" aria-label="Holy Burger"><img src="img/logo.svg" alt="Holy Burger"></a>
+  <nav class="hdr-nav" aria-label="Menu">
+    <a href="#cardapio" data-i18n="nav.menu">Cardápio</a>
+    <a href="#rec">Rec</a>
+    <a href="#premios" data-i18n="nav.awards">Prêmios</a>
+    <a href="#eventos" data-i18n="nav.events">Eventos</a>
+    <a href="#visite" data-i18n="nav.visit">Visite</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang="pt" aria-pressed="true">PT-BR</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <span class="lang-pill" aria-hidden="true"></span>
+  </div>
+  <button class="hdr-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <a href="#cardapio" data-i18n="nav.menu">Cardápio</a>
+  <a href="#rec">Rec</a>
+  <a href="#premios" data-i18n="nav.awards">Prêmios</a>
+  <a href="#eventos" data-i18n="nav.events">Eventos</a>
+  <a href="#visite" data-i18n="nav.visit">Visite</a>
+  <p class="drawer-foot">Rua Dr. Cesário Mota Júnior, 527 · Vila Buarque · SP</p>
+</div>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg">
+    <source src="video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade"></div>
+
+  <div class="hero-hud" aria-hidden="true">
+    <span class="hud-rec"><b></b>REC</span>
+    <span class="hud-tc" data-tc>00:00:00:00</span>
+    <span class="hud-geo">23°32'41"S · 46°38'53"W</span>
+    <span class="hud-ch">CH—01 / VILA BUARQUE</span>
+  </div>
+
+  <div class="hero-in">
+    <p class="spaced hero-since"><span>D E S D E</span> <span class="gold">2 0 1 3</span></p>
+    <h1 class="hero-title">
+      <span class="sr" data-i18n="hero.title">O Clássico do Centro</span>
+      <img src="img/classico.png" alt="" class="hero-classico" width="2000" height="164">
+    </h1>
+    <p class="hero-addr">Rua Dr. Cesário Mota Júnior, 527 · Vila Buarque · São Paulo/SP</p>
+  </div>
+
+  <div class="hero-sticker" aria-hidden="true">
+    <span class="st-top" data-i18n="hero.sticker1">2º melhor</span>
+    <span class="st-big">Nº2</span>
+    <span class="st-bot" data-i18n="hero.sticker2">hambúrguer do mundo</span>
+  </div>
+
+  <a href="#mao" class="hero-scroll"><span data-i18n="hero.scroll">Role</span> ↓</a>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span data-i18n="tick">O CLÁSSICO DO CENTRO ✦ VILA BUARQUE ✦ SÃO PAULO ✦ DESDE 2013 ✦ 2º MELHOR HAMBÚRGUER DO MUNDO ✦ MELHOR HAMBÚRGUER DO BRASIL 26/27 ✦ </span>
+    <span data-i18n="tick">O CLÁSSICO DO CENTRO ✦ VILA BUARQUE ✦ SÃO PAULO ✦ DESDE 2013 ✦ 2º MELHOR HAMBÚRGUER DO MUNDO ✦ MELHOR HAMBÚRGUER DO BRASIL 26/27 ✦ </span>
+  </div>
+</div>
+
+<!-- ===== NA MÃO (horizontal) ===== -->
+<section class="mao" id="mao">
+  <div class="mao-pin">
+    <div class="mao-head">
+      <p class="tag">№ 001 — <span data-i18n="mao.tag">Na mão</span></p>
+      <h2 class="h-xl"><span data-i18n="mao.t1">Do centro</span><br><em class="gold" data-i18n="mao.t2">pro mundo.</em></h2>
+      <p class="lead" data-i18n="mao.lead">Desde 2013 na mesma esquina da Vila Buarque. Hoje o Holy está nos rankings dos melhores do planeta, mas o jeito de comer continua o mesmo: com as duas mãos.</p>
+      <p class="mao-hint" aria-hidden="true">← drag / scroll →</p>
+    </div>
+    <div class="mao-track">
+      <figure class="card r1"><img src="img/hand/aa-7.jpg" alt="" loading="lazy"><figcaption>№01 · ALL AMERICAN 65</figcaption><i class="tape"></i></figure>
+      <figure class="card r2"><img src="img/hand/mao-1.jpg" alt="" loading="lazy"><figcaption>№02 · DUBAI 2026</figcaption><i class="tape"></i></figure>
+      <figure class="card r3 big"><img src="img/hand/aa-5.jpg" alt="" loading="lazy"><figcaption>№03 · VILA BUARQUE</figcaption></figure>
+      <figure class="card r4"><img src="img/hand/mao-4.jpg" alt="" loading="lazy"><figcaption>№04 · HOLY / SP—BR</figcaption><i class="tape"></i></figure>
+      <figure class="card r1"><img src="img/hand/aa-6.jpg" alt="" loading="lazy"><figcaption>№05 · DRY AGED 65</figcaption></figure>
+      <figure class="card r2 big"><img src="img/hand/mao-3.jpg" alt="" loading="lazy"><figcaption>№06 · DUBAI BURGER CHAMPIONSHIP</figcaption><i class="tape"></i></figure>
+      <figure class="card r3"><img src="img/hand/aa-4.jpg" alt="" loading="lazy"><figcaption>№07 · O CLÁSSICO</figcaption></figure>
+      <figure class="card r4"><img src="img/hand/mao-7.jpg" alt="" loading="lazy"><figcaption>№08 · TAKE AWAY</figcaption><i class="tape"></i></figure>
+      <figure class="card r1 big"><img src="img/hand/aa-9.jpg" alt="" loading="lazy"><figcaption>№09 · SMASH</figcaption></figure>
+      <figure class="card r2"><img src="img/hand/mao-8.jpg" alt="" loading="lazy"><figcaption>№10 · THE SAME OLD BLUES</figcaption><i class="tape"></i></figure>
+      <figure class="card r3"><img src="img/hand/aa-3.jpg" alt="" loading="lazy"><figcaption>№11 · CENTRO SP</figcaption></figure>
+      <figure class="card r4"><img src="img/hand/mao-6.jpg" alt="" loading="lazy"><figcaption>№12 · WORLD TOUR</figcaption><i class="tape"></i></figure>
+      <figure class="card r1"><img src="img/hand/aa-11.jpg" alt="" loading="lazy"><figcaption>№13 · DESDE 2013</figcaption></figure>
+      <div class="card-end">
+        <img src="img/logo.svg" alt="">
+        <p class="spaced">S I N C E &nbsp; 2 0 1 3</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PONY LINE ===== -->
+<section class="pony">
+  <div class="pony-media">
+    <img src="img/hand/mao-8.jpg" alt="Hambúrguer Holy Burger na mão" loading="lazy">
+    <span class="pony-tag">PONY LINE · 200G · DRY AGED 65</span>
+  </div>
+  <div class="pony-copy">
+    <p class="tag">№ 002 — Burger Dudes · The World's 25 Best Burgers</p>
+    <p class="pony-rank"><span class="gold">2º</span></p>
+    <h2 class="h-xl"><span data-i18n="pony.t1">Melhor hambúrguer</span><br><span data-i18n="pony.t2">do mundo.</span></h2>
+    <p class="lead" data-i18n="pony.lead">O Pony Line: burger de 200g dry aged 65 dias, cheddar inglês e melaço de bacon no pão brioche. Somente no ponto da casa.</p>
+    <dl class="pony-specs">
+      <div><dt>200G</dt><dd data-i18n="pony.s1">Blend</dd></div>
+      <div><dt>65</dt><dd data-i18n="pony.s2">Dias dry aged</dd></div>
+      <div><dt>26/27</dt><dd>Burger Dudes</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== CARDÁPIO ===== -->
+<section class="menu" id="cardapio">
+  <div class="menu-frame">
+    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+    <div class="menu-top">
+      <p class="spaced">S I N C E</p>
+      <img src="img/logo.svg" alt="Holy Burger" class="menu-logo">
+      <p class="spaced">2 0 1 3</p>
+    </div>
+    <h2 class="menu-title" data-i18n="menu.title">Cardápio</h2>
+    <div class="menu-tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="burgers">Burgers</button>
+      <button role="tab" aria-selected="false" data-tab="entradas" data-i18n="menu.starters">Entradas</button>
+      <button role="tab" aria-selected="false" data-tab="sobremesas" data-i18n="menu.desserts">Sobremesas</button>
+      <button role="tab" aria-selected="false" data-tab="shakes">Milkshakes</button>
+    </div>
+    <p class="menu-note" data-i18n="menu.note">Acompanham fritas · Todos os pães são feitos pela nossa equipe da Casa do Padeiro · Utilizamos gordura de bacon e pimenta preta moída no preparo dos nossos burgers</p>
+    <div class="menu-grid" data-menu></div>
+    <div class="menu-foot">
+      <p data-i18n="menu.drinks">Também tem soft drinks, cervejas (incluindo a Holy IPA) e coquetéis autorais.</p>
+      <a href="cardapio-holy-burger.pdf" class="btn" target="_blank" rel="noopener" data-i18n="menu.pdf">Cardápio completo (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REC ===== -->
+<section class="rec" id="rec">
+  <div class="rec-head">
+    <p class="tag">№ 003 — <span data-i18n="rec.tag">Fita da casa</span></p>
+    <h2 class="h-xl rec-title"><b class="rec-dot"></b>REC</h2>
+    <p class="lead" data-i18n="rec.lead">O que rola na chapa, no salão e na estrada. Troque de canal.</p>
+  </div>
+
+  <div class="rec-deck">
+    <div class="vf">
+      <video class="vf-video" muted loop playsinline preload="none" poster="img/rec/all-american.jpg"></video>
+      <canvas class="vf-static" aria-hidden="true"></canvas>
+      <div class="vf-ui" aria-hidden="true">
+        <span class="vf-c tl"></span><span class="vf-c tr"></span><span class="vf-c bl"></span><span class="vf-c br"></span>
+        <span class="vf-rec"><b></b>REC</span>
+        <span class="vf-bat">▮▮▮▯</span>
+        <span class="vf-ch" data-vf-ch>CH 01</span>
+        <span class="vf-tc" data-vf-tc>00:00:00</span>
+        <span class="vf-date">SP · 2026</span>
+        <span class="vf-label" data-vf-label>ALL AMERICAN 65</span>
+      </div>
+    </div>
+
+    <ol class="rec-list">
+      <li><button type="button" class="ch is-on" data-src="video/all-american.mp4" data-poster="img/rec/all-american.jpg" data-label="ALL AMERICAN 65">
+        <img src="img/rec/all-american.jpg" alt="" loading="lazy"><span class="ch-n">CH 01</span><span class="ch-t">All American 65</span><span class="ch-d" data-i18n="rec.c1">O primeiro smash dry aged do Brasil</span></button></li>
+      <li><button type="button" class="ch" data-src="video/old-blues.mp4" data-poster="img/rec/old-blues.jpg" data-label="THE SAME OLD BLUES">
+        <img src="img/rec/old-blues.jpg" alt="" loading="lazy"><span class="ch-n">CH 02</span><span class="ch-t">The Same Old Blues</span><span class="ch-d" data-i18n="rec.c2">Gorgonzola, cogumelos defumados, alho negro</span></button></li>
+      <li><button type="button" class="ch" data-src="video/balcao.mp4" data-poster="img/rec/balcao.jpg" data-label="BALCÃO / PASS">
+        <img src="img/rec/balcao.jpg" alt="" loading="lazy"><span class="ch-n">CH 03</span><span class="ch-t" data-i18n="rec.c3t">Balcão</span><span class="ch-d" data-i18n="rec.c3">Da chapa pra mesa, no centro</span></button></li>
+      <li><button type="button" class="ch" data-src="video/eventos.mp4" data-poster="img/rec/eventos.jpg" data-label="DUBAI BURGER CHAMPIONSHIP">
+        <img src="img/rec/eventos.jpg" alt="" loading="lazy"><span class="ch-n">CH 04</span><span class="ch-t">Dubai 2026</span><span class="ch-d" data-i18n="rec.c4">3º colocado no mundial</span></button></li>
+      <li><button type="button" class="ch" data-src="video/hero.mp4" data-poster="img/rec/hero.jpg" data-label="VILA BUARQUE">
+        <img src="img/rec/hero.jpg" alt="" loading="lazy"><span class="ch-n">CH 05</span><span class="ch-t">Vila Buarque</span><span class="ch-d" data-i18n="rec.c5">Uma noite na casa</span></button></li>
+    </ol>
+  </div>
+  <a class="rec-ig" href="https://www.instagram.com/holyburgersp/" target="_blank" rel="noopener">@holyburgersp ↗</a>
+</section>
+
+<!-- ===== PRÊMIOS ===== -->
+<section class="awards" id="premios">
+  <div class="awards-head">
+    <p class="tag">№ 004 — <span data-i18n="aw.tag">Prateleira</span></p>
+    <h2 class="h-xl" data-i18n-html="aw.title">Prêmios</h2>
+    <div class="awards-stats">
+      <div><b class="count" data-to="2">0</b><sup>º</sup><span data-i18n="aw.s1">melhor do mundo</span></div>
+      <div><b class="count" data-to="1">0</b><sup>º</sup><span data-i18n="aw.s2">melhor do Brasil</span></div>
+      <div><b class="count" data-to="13">0</b><span data-i18n="aw.s3">anos de centro</span></div>
+    </div>
+  </div>
+
+  <div class="wall">
+    <figure class="sticker"><img src="img/premios/premio-1.png" alt="Burger Dudes: 2º melhor hambúrguer do mundo 26/27" loading="lazy"><figcaption data-i18n="aw.1">2nd best burger in the world 26/27</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-6.png" alt="Prazeres da Mesa: melhor hambúrguer do Brasil 26/27" loading="lazy"><figcaption data-i18n="aw.6">Best burger in Brazil 26/27</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-2.png" alt="Dubai Burger Championship: 3º colocado 2026" loading="lazy"><figcaption data-i18n="aw.2">3rd place, Dubai world championship 2026</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-10.png" alt="Beogradski Burger Festival: melhor hambúrguer 2026" loading="lazy"><figcaption data-i18n="aw.10">Best burger, Belgrade festival 2026</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-4.png" alt="Veja SP Comer &amp; Beber: tricampeão melhor hambúrguer" loading="lazy"><figcaption data-i18n="aw.4">Three-time best burger 2024, 25 &amp; 26</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-3.png" alt="Prêmio Hambúrguer Perfeito" loading="lazy"><figcaption data-i18n="aw.3">Best burger winner 21/22</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-5.png" alt="Paladar Estadão: bicampeão melhor hambúrguer de São Paulo" loading="lazy"><figcaption data-i18n="aw.5">Two-time best burger in São Paulo 2016 &amp; 2017</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-9.png" alt="Prêmio Nossa UOL: 2º lugar melhor hambúrguer de São Paulo" loading="lazy"><figcaption data-i18n="aw.9">2nd best burger in São Paulo 24/25 &amp; 25/26</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-8.png" alt="Guia do Hambúrguer: campeão da Copa do Hambúrguer 2017" loading="lazy"><figcaption data-i18n="aw.8">Burger Cup champion 2017</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-7.png" alt="Estudo Unilever e Veja" loading="lazy"><figcaption data-i18n="aw.7">Most loved burger in SP 25/26</figcaption></figure>
+    <figure class="sticker"><img src="img/premios/premio-11.png" alt="Datafolha O Melhor de São Paulo: finalista 2026" loading="lazy"><figcaption data-i18n="aw.11">Finalist, burger joint 2026</figcaption></figure>
+  </div>
+</section>
+
+<!-- ===== EVENTOS ===== -->
+<section class="events" id="eventos">
+  <div class="events-media">
+    <video autoplay muted loop playsinline preload="none" poster="img/eventos-poster.jpg" data-lazy-video>
+      <source data-src="video/eventos.mp4" type="video/mp4">
+    </video>
+    <span class="events-stamp">HOLY BURGER<br>SÃO PAULO, BRAZIL</span>
+  </div>
+  <div class="events-copy">
+    <p class="tag">№ 005 — <span data-i18n="ev.tag">Na estrada</span></p>
+    <h2 class="h-xl" data-i18n-html="ev.title">Quer o Holy<br>no seu evento?</h2>
+    <p class="lead" data-i18n="ev.lead">Levamos o Holy Burger para festivais, ativações, eventos corporativos e experiências gastronômicas por todo o Brasil. Estrutura profissional, operação rápida e burgers reconhecidos internacionalmente.</p>
+    <p class="lead dim" data-i18n="ev.lead2">Envie um e-mail e nos conte como podemos levar a experiência do Holy Burger para o seu evento.</p>
+    <a class="btn btn-gold" href="mailto:eventos@holyburger.com.br">eventos@holyburger.com.br</a>
+  </div>
+</section>
+
+<!-- ===== IMPRENSA ===== -->
+<section class="press" id="imprensa">
+  <p class="tag">№ 006 — <span data-i18n="pr.tag">Imprensa</span></p>
+  <div class="press-row">
+    <a href="https://drive.google.com/drive/folders/1JK8HwROESDZMv6w1aNhW3zruC1MJq6Iz?usp=drive_link" target="_blank" rel="noopener"><span data-i18n="pr.photos">Fotos</span><i>↗</i></a>
+    <a href="https://drive.google.com/drive/folders/1WP1WpqRxtzt3trtX_1fyg2WyiVD-gtBp?usp=sharing" target="_blank" rel="noopener"><span>Logos</span><i>↗</i></a>
+    <a href="https://docs.google.com/document/d/18ZDaSqr9JLIxc730jTiUp45hcNfCaqzqV18d6xzdggU/edit?tab=t.0" target="_blank" rel="noopener"><span>Release</span><i>↗</i></a>
+  </div>
+</section>
+
+<!-- ===== VISITE ===== -->
+<section class="visit" id="visite">
+  <img src="img/fachada-traco.png" alt="" class="visit-facade" loading="lazy">
+  <div class="visit-grid">
+    <div class="visit-col">
+      <p class="tag">№ 007 — <span data-i18n="vi.tag">Visite</span></p>
+      <h2 class="h-lg">Rua Dr. Cesário<br>Mota Júnior, 527</h2>
+      <p class="lead">Vila Buarque · São Paulo/SP</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Holy+Burger+Rua+Dr.+Ces%C3%A1rio+Mota+J%C3%BAnior+527+S%C3%A3o+Paulo" target="_blank" rel="noopener" data-i18n="vi.map">Como chegar ↗</a>
+    </div>
+    <div class="visit-col">
+      <p class="tag" data-i18n="vi.hours">Horários de funcionamento</p>
+      <table class="hours">
+        <tr><th data-i18n="vi.mon">Segunda</th><td data-i18n="vi.closed">Fechado</td></tr>
+        <tr><th data-i18n="vi.tue">Terça a quinta</th><td>11H—16H<br>18H—00H</td></tr>
+        <tr><th data-i18n="vi.fri">Sexta e sábado</th><td>11H—00H</td></tr>
+        <tr><th data-i18n="vi.sun">Domingo</th><td>11H—23H</td></tr>
+      </table>
+      <p class="open-now" data-open-now></p>
+    </div>
+    <div class="visit-col">
+      <p class="tag" data-i18n-html="vi.talk">Dúvidas, sugestões<br>ou reclamações?</p>
+      <a class="btn btn-gold" href="https://wa.me/5511957727208" target="_blank" rel="noopener" data-i18n="vi.cta">Fale com a gente</a>
+      <p class="pay"><span data-i18n="vi.pay">Aceitamos</span>: Visa · Mastercard · American Express · Elo · Alelo · Ticket · VR · Pluxee · Sodexo</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <img src="img/classico.png" alt="O Clássico do Centro" class="ftr-classico" loading="lazy">
+  <div class="ftr-row">
+    <img src="img/logo.svg" alt="Holy Burger" class="ftr-logo">
+    <p>© 2013—2026 Holy Burger · <a href="https://www.instagram.com/holyburgersp/" target="_blank" rel="noopener">@holyburgersp</a></p>
+    <a href="#top" class="ftr-top" data-i18n="ft.top">Topo ↑</a>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
