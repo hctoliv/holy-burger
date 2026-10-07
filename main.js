@@ -7,7 +7,7 @@
   const T = {
     pt: {
       'nav.menu': 'Cardápio', 'nav.awards': 'Prêmios', 'nav.events': 'Eventos', 'nav.visit': 'Visite',
-      'hero.title': 'O Clássico do Centro', 'hero.sticker1': '2º melhor', 'hero.sticker2': 'hambúrguer do mundo', 'hero.scroll': 'Role',
+      'hero.title': 'O Clássico do Centro', 'hero.since': 'D E S D E', 'hero.sticker1': '2º melhor', 'hero.sticker2': 'hambúrguer do mundo', 'hero.scroll': 'Role',
       'tick': 'O CLÁSSICO DO CENTRO ✦ VILA BUARQUE ✦ SÃO PAULO ✦ DESDE 2013 ✦ 2º MELHOR HAMBÚRGUER DO MUNDO ✦ MELHOR HAMBÚRGUER DO BRASIL 26/27 ✦ ',
       'mao.tag': 'Na mão', 'mao.t1': 'Do centro', 'mao.t2': 'pro mundo.',
       'mao.lead': 'Desde 2013 na mesma esquina da Vila Buarque. Hoje a Holy está nos rankings dos melhores do planeta, mas o jeito de comer continua o mesmo: com as duas mãos.',
@@ -36,7 +36,7 @@
     },
     en: {
       'nav.menu': 'Menu', 'nav.awards': 'Awards', 'nav.events': 'Events', 'nav.visit': 'Visit',
-      'hero.title': 'The Downtown Classic', 'hero.sticker1': '2nd best', 'hero.sticker2': 'burger in the world', 'hero.scroll': 'Scroll',
+      'hero.title': 'The Downtown Classic', 'hero.since': 'S I N C E', 'hero.sticker1': '2nd best', 'hero.sticker2': 'burger in the world', 'hero.scroll': 'Scroll',
       'tick': 'O CLÁSSICO DO CENTRO ✦ THE DOWNTOWN CLASSIC ✦ VILA BUARQUE ✦ SÃO PAULO ✦ SINCE 2013 ✦ 2ND BEST BURGER IN THE WORLD ✦ BEST BURGER IN BRAZIL 26/27 ✦ ',
       'mao.tag': 'In hand', 'mao.t1': 'From downtown', 'mao.t2': 'to the world.',
       'mao.lead': 'Since 2013 on the same corner of Vila Buarque. Today Holy sits on the lists of the best burgers on the planet, but the way to eat it hasn’t changed: with both hands.',
