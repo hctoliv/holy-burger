@@ -26,7 +26,7 @@ em{font-style:normal}
 /* ---------- type ---------- */
 .spaced{letter-spacing:.55em;font-size:.78rem;font-weight:400;text-transform:uppercase}
 .tag{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--gold);margin-bottom:1.2rem}
-.h-xl{font-weight:700;text-transform:uppercase;font-size:clamp(2.6rem,7.4vw,7.4rem);line-height:.88;letter-spacing:-.025em}
+.h-xl{font-weight:700;text-transform:uppercase;font-size:clamp(2.6rem,7.4vw,7.4rem);line-height:.98;letter-spacing:-.025em}
 .h-lg{font-weight:700;text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,3.2rem);line-height:.95;letter-spacing:-.015em}
 .lead{font-size:clamp(1rem,1.25vw,1.18rem);max-width:34rem;margin-top:1.4rem;color:var(--cream)}
 .lead.dim{color:var(--dim)}
@@ -129,13 +129,15 @@ html[lang="en"] .hero-en{display:block}
 .card-end img{width:100%}
 
 /* ---------- pony ---------- */
-.pony{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:100svh;border-top:1px solid var(--line)}
-.pony-media{position:relative;overflow:hidden;background:#000}
-.pony-media img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
-@keyframes kb{to{transform:scale(1.12) translate(-2%,-2%)}}
-.pony-tag{position:absolute;left:20px;bottom:20px;background:var(--gold);color:var(--ink);font-weight:700;font-size:.72rem;letter-spacing:.16em;padding:.8em 1em .6em;transform:rotate(-2deg)}
+.pony{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);min-height:100svh;border-top:1px solid var(--line)}
+.pony-media{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,rgba(233,169,34,.18),transparent 65%),var(--ink-2);display:grid;place-items:center;padding:clamp(90px,12vh,140px) clamp(20px,4vw,56px)}
+.pony-card{position:relative;width:min(100%,460px);background:var(--cream-2);padding:12px 12px 0;transform:rotate(-3deg);box-shadow:0 30px 80px rgba(0,0,0,.6);transition:transform .5s var(--ease)}
+.pony-card:hover{transform:rotate(0) scale(1.02)}
+.pony-card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.pony-card figcaption{color:var(--ink);font-size:.7rem;font-weight:700;letter-spacing:.14em;padding:1em .2em .8em}
 .pony-copy{padding:clamp(80px,12vh,140px) var(--pad);display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 20%,rgba(233,169,34,.14),transparent 60%)}
-.pony-rank{font-weight:700;font-size:clamp(7rem,20vw,19rem);line-height:.75;letter-spacing:-.06em;margin:0 0 .1em -.04em}
+.pony-rank{font-weight:700;font-size:clamp(6rem,15vw,14rem);line-height:.9;letter-spacing:-.06em;margin:0 0 .15em -.04em}
+.pony-copy .h-xl{font-size:clamp(2.4rem,5vw,5.4rem)}
 .pony-specs{display:flex;gap:clamp(20px,4vw,56px);margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1.4rem}
 .pony-specs dt{font-weight:700;font-size:clamp(1.6rem,2.6vw,2.4rem);color:var(--gold);line-height:1}
 .pony-specs dd{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:.5em}
@@ -273,7 +275,7 @@ html[lang="en"] .sticker figcaption{display:block}
   .lang{margin-left:auto}
   .hdr-burger{display:block}
   .pony,.events{grid-template-columns:1fr}
-  .pony-media{aspect-ratio:4/5;max-height:80svh}
+  .pony-media{padding:80px var(--pad) 40px}
   .events-media{min-height:0;aspect-ratio:1}
   .rec-deck{grid-template-columns:1fr}
   .rec-head{grid-template-columns:1fr}
